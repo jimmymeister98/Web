@@ -12,7 +12,7 @@ class StringGenerator(object):
     @cherrypy.expose
     def generate(self, length=8):
         some_string = ''.join(random.sample(string.hexdigits, int(length)))
-        cherrypy.session['mystring'] = some_string
+        cherrypy.session['mystring'] = some_string              #scheiss auf fehler, funktioniert trotzdem
         return some_string
 
     @cherrypy.expose
